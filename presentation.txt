@@ -39,35 +39,66 @@
 
 
 -> Byggstenar i Bash
+
+
     -> Utility commands [7]
         ls      -> list files -> Listar upp filer
         ls -a   -> skriver ut "allt"
-
         cd      -> change directory -> används för att byta directory
+        mkdir   -> make directory -> gör en mapp
+        rm      -> remove
 
+        echo    -> Skriv ut sträng
         cat     -> catinate -> läser innehåll i en fil och skriver ut det
-        
         grep    -> matchar raderna i en fil mot en sträng och skriver ut
         grep -i -> Case insensitive
         grep -R -> rekursivt söker igenom filsystemet för filnamn
 
 
     -> Operatorer
-        |   -> Pipe -> Länka program/commands till varandra
-        < > -> Arrow operators -> Länka program till filer/strömmar
-        
+        |       -> Pipe -> Länka program/commands till varandra
+        ||      -> OR -> LHS blir godkänt kör höger
+        < >     -> Arrow operators -> Länka program till filer/strömmar "skriv över"
+        << >>   -> Arrow operators -> Länka program till filer/strömmar "lägger till"
+        &&      -> Ifall det först kommandot blir godkänt kör nästa
+        ;       -> Separator
+
+
+    -> Loopar
+        while [statement]
+        do
+            []
+        done
+
+        for [variabel] in [set]
+        do
+            []
+        done
+
+        until [statement]
+        do
+            []
+        done
+
+
+    -> Conditional
+        if [statement] ; then
+            []
+        elif [statement] ; then
+            []
+        else
+            []
+        fi
+
+
+    -> Kommentarer
+        # Kommentar
+
+
+    -> 
 
 
 
-Pipe
-
-    |
-
-Redirect   
-
-    <   >
-
-Kom till under Multics-arbetet.
 
 -> Källor
 [1] https://en.wikipedia.org/wiki/Unix
