@@ -1,0 +1,10 @@
+
+    Directory: C:\Projects\KO Utveckling\Linux-scripting
+
+[32;1mMode                 LastWriteTime         Length Name[0m
+[32;1m----                 -------------         ------ ----[0m
+-a---          2023-03-21    18:16             48 demo.sh
+-a---          2023-03-21    18:21              0 filer.txt
+-a---          2023-03-21    18:20           3473 presentation.txt
+-a---          2023-03-21    17:14         202349 sample.txt
+

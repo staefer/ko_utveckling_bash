@@ -18,7 +18,7 @@
     -> Richard Stallman & Linus Thorvalds
         -> Linus skrev Linux-kernelen
         -> Linux-kernelen blev sen relevant för den valdes som en del till GNU-projektet.
-            -> GNU är en rekursiv akronym för "GNU is Not Linux" [6]
+            -> GNU är en rekursiv akronym för "GNU is Not UNIX" [6]
         -> Linus portade BASH och GCC (GNU Compiler Collection) bland annat [4]
             
             Rant:
@@ -39,29 +39,51 @@
 
 
 -> Byggstenar i Bash
-
-
     -> Utility commands [7]
         ls      -> list files -> Listar upp filer
         ls -a   -> skriver ut "allt"
+        ls -u   -> kolla när sist en fil öppnades
+        stat    -> info om en fil
+        stat demo.sh
+
+        tr      -> Transform
+
         cd      -> change directory -> används för att byta directory
         mkdir   -> make directory -> gör en mapp
         rm      -> remove
+        rm -R   -> rekursiv remove
 
         echo    -> Skriv ut sträng
         cat     -> catinate -> läser innehåll i en fil och skriver ut det
+        cat sample.txt
+
+        touch   -> Skapa en fil om den inte finns
+                -> Om den finns uppdatera "latest accessed"
+
         grep    -> matchar raderna i en fil mot en sträng och skriver ut
         grep -i -> Case insensitive
+        
+        grep -i "blä." sample.txt
+
         grep -R -> rekursivt söker igenom filsystemet för filnamn
+
+    -> Och självklart alla sorters subprogram i PATH som man kan deklarera själv.
+
+
 
 
     -> Operatorer
         |       -> Pipe -> Länka program/commands till varandra
         ||      -> OR -> LHS blir godkänt kör höger
         < >     -> Arrow operators -> Länka program till filer/strömmar "skriv över"
+        ls > filer.txt
+
         << >>   -> Arrow operators -> Länka program till filer/strömmar "lägger till"
         &&      -> Ifall det först kommandot blir godkänt kör nästa
         ;       -> Separator
+
+
+
 
 
     -> Loopar
@@ -80,8 +102,17 @@
             []
         done
 
+        for var in 1 2 3 ; do echo 'hohoho' ; done
+
+
+
+
 
     -> Conditional
+        -> 0: false
+        -> 1: true
+        -> Oftast returnerar program en av dom här
+
         if [statement] ; then
             []
         elif [statement] ; then
@@ -91,11 +122,50 @@
         fi
 
 
+
+
     -> Kommentarer
         # Kommentar
 
 
-    -> 
+
+
+
+    ->  Variabler
+        variabel1 = "delfin-dalmatin"
+        local variabel2 = "sengångar-sill"
+        $1 - $9 (demo.sh first_arg second_arg )
+
+        -> echo $variabel1
+        -> echo $variabel2
+
+
+
+
+
+    -> Funktioner
+        ge_mig_groda () {
+            echo 'ribbit'
+        }
+
+        ge_mig_en_grod()
+
+
+
+// Oläsbart demo
+for var in 1 2 3 ; do mkdir $var ; done && cd 1 && touch 'hiddeninfo.txt' && cd .. && grep -i "bläck" sample.txt | tr a-z A-Z > 1/hiddeninfo.txt
+
+// Cleanup
+rm -R 1 2 3
+
+
+
+
+
+
+
+
+
 
 
 
