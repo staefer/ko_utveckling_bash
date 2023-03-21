@@ -1,0 +1,79 @@
+-> Intro
+    -> Dennis Ritchie (C) & Ken Thompson (B, Go, Regex) [1],[2],[3]
+        -> Jobbade i Bell Labs
+        -> Tillsammans med MIT och GE Utvecklade Multics (Timeshare-system)
+        -> Komplext med många problem
+        -> UNIX börjades för att Thompson ville porta ett spel
+            -> Skulle vara enkelt
+            -> Dennis Ritchie anslöt
+            -> "If the work is not credited, it's probably Dennis or Ken"
+        -> Fick gemensam Turing-award för arbete kring "generella OS"
+        
+    -> Steve Bourne [4]
+        -> Skrev "Bourne Shell" för UNIX
+
+    -> Brian Fox
+        -> Skrev 1989 BASH som ersättning för Bourne Shell
+    
+    -> Richard Stallman & Linus Thorvalds
+        -> Linus skrev Linux-kernelen
+        -> Linux-kernelen blev sen relevant för den valdes som en del till GNU-projektet.
+            -> GNU är en rekursiv akronym för "GNU is Not Linux" [6]
+        -> Linus portade BASH och GCC (GNU Compiler Collection) bland annat [4]
+            
+            Rant:
+            -> Tar för sig väldigt mycket creds för sin port
+            -> Otrevlig mot kollegor [5]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+-> Byggstenar i Bash
+    -> Utility commands [7]
+        ls      -> list files -> Listar upp filer
+        ls -a   -> skriver ut "allt"
+
+        cd      -> change directory -> används för att byta directory
+
+        cat     -> catinate -> läser innehåll i en fil och skriver ut det
+        
+        grep    -> matchar raderna i en fil mot en sträng och skriver ut
+        grep -i -> Case insensitive
+        grep -R -> rekursivt söker igenom filsystemet för filnamn
+
+
+    -> Operatorer
+        |   -> Pipe -> Länka program/commands till varandra
+        < > -> Arrow operators -> Länka program till filer/strömmar
+        
+
+
+
+Pipe
+
+    |
+
+Redirect   
+
+    <   >
+
+Kom till under Multics-arbetet.
+
+-> Källor
+[1] https://en.wikipedia.org/wiki/Unix
+[2] https://en.wikipedia.org/wiki/Dennis_Ritchie
+[3] https://en.wikipedia.org/wiki/Ken_Thompson
+[4] https://en.wikipedia.org/wiki/Bash_(Unix_shell)
+[5] https://www.theregister.com/2013/07/16/torvalds_potty_mouty_fight_back/
+[6] https://en.wikipedia.org/wiki/GNU
+[7] https://www.ibm.com/docs/en/aix/7.1?topic=commands
